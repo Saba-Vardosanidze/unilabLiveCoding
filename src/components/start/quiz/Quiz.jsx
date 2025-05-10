@@ -21,14 +21,14 @@ const Quiz = () => {
   };
   if (isLoading) return <p>Loading ...</p>;
   if (error) return <p>Error</p>;
-  //   if (time === 0) return alert("quiz End");
+  if (time === 0) return alert("quiz End");
 
   return (
     <div className="m-auto mt-[187px] w-full max-w-[1440px]">
       <div className="flex flex-wrap gap-[48px] max-w-[1142px]">
         {data.map((eachElement) => (
           <img
-            onClick={() => scoreClick(eachElement, eachElement.url.dog)}
+            onClick={() => scoreClick(eachElement, eachElement.type.dogRes)}
             className="w-[190px] h-[190px] cursor-pointer"
             src={eachElement.url}
             alt="dogCanImgs"
